@@ -1,0 +1,26 @@
+body {
+  font-family: poppins;
+  color: #fff;
+  background-color: #232323;
+}
+
+nav li:last-child a {
+  text-decoration: underline;
+}
+
+nav li a {
+  transition: all 0.3s ease;
+}
+nav li a:hover {
+  color: rgb(207, 66, 56);
+}
+
+.add {
+  border: 2px solid red;
+  color: rgb(207, 66, 56);
+  transition: all 0.3s ease;
+}
+.add:hover {
+  background-color: #fff;
+  color: #232323;
+}
