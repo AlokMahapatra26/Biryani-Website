@@ -2,15 +2,13 @@
 
 body{
     font-family:poppins;
-    color: $pure;
-    background-color: $dark;
+    color: $dark;
+    background-color: $pure;
 }
 
-nav li:last-child a {
-    text-decoration: underline;
-    
+li a i {
+    color: white;
 }
-
 
 
 nav li a {
@@ -25,8 +23,18 @@ nav li a {
     color: $primary;
     transition: $smooth;
     &:hover{
-        background-color: $pure;
-        color: $dark;
+        background-color: red;
+        color: $pure;
     }
     
 }
+
+.btn-primary{
+    background-color: $primary;
+
+    &:hover{
+        background-color: $primary-hover;
+        transition: $smooth;
+    }
+}
+

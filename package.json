@@ -8,19 +8,28 @@
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress  --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress  --config=node_modules/laravel-mix/setup/webpack.config.js" 
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress  --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
+    "connect-mongo": "^5.0.0",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-ejs-layouts": "^2.5.1"
+    "express-ejs-layouts": "^2.5.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.1.0",
+    "noty": "^3.2.0-beta-deprecated"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.49"
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^12.6.0"
   }
-  
 }
