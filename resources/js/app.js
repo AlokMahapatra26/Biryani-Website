@@ -6,6 +6,7 @@ let cartCounter = document.querySelector('#cartCounter');
 function updateCart(item){
     axios.post('/update-cart' , item).then(res => {
         cartCounter.innerText = res.data.totalQty
+        
     }).catch(err => {
         alert(err);
     })
@@ -20,3 +21,5 @@ addToCart.forEach((btn)=>{
         
     })
 })
+
+

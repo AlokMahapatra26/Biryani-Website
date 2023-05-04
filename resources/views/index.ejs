@@ -3,6 +3,12 @@
     <section class="hero h-screen flex items-center">
          <div class="container mx-auto flex justify-between items-center ">
             <div class="w-1/2">
+                <% if(user) { %>
+                  
+                <h2>Heyy <%= user.name %></h2>
+                <% }else { %>
+                 <h2>heyyy</h2>
+                <% } %>    
                 <h6 class="text-lg"><em>Are you hungry?</em></h6>
 
                 <h3 class="text-3xl font-bold">Order Chicken Biryani</h3>

@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const flash = require('express-flash');
 const MongoStore = require('connect-mongo');
-
+const passport = require('passport');
 
 
 //connecting database using mongoose
@@ -42,10 +42,17 @@ app.use(session({
 //Express flash
 app.use(flash());
 
+//Passport config
+const passportInit = require('./app/config/passport');
+passportInit(passport);
+app.use(passport.initialize())
+app.use(passport.session());
+
 
 //Global middleware
 app.use((req , res , next)=>{
     res.locals.session = req.session;
+    res.locals.user = req.user
     next();
 })
 
@@ -57,6 +64,7 @@ app.set('view engine' , 'ejs');
 
 //Assets
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended:false}))
 app.use(express.json());
 
 
@@ -67,5 +75,5 @@ require('./routes/web')(app);
 //listening to the pory
 const PORT = process.env.PORT || 5000;
 app.listen(PORT , ()=>{
-    console.log(`server is running in port number ${PORT}`);
+    console.log(`server is running in port numbe ${PORT}`);
 }) 
